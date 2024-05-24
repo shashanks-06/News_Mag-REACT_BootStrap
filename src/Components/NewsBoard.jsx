@@ -13,7 +13,7 @@ const NewsBoard = ({ category }) => {
       .then((data) => {
         setArticles(data.articles);
       });
-  }, []);
+  }, [category]);
 
   return (
     <div>

@@ -1,3 +1,5 @@
+import imgNotAvailable from "/img/Image_not_available.png";
+
 const NewsItem = ({ title, author, description, url, src }) => {
   return (
     <div
@@ -7,7 +9,7 @@ const NewsItem = ({ title, author, description, url, src }) => {
       }}
     >
       <img
-        src={src}
+        src={src ? src : imgNotAvailable}
         style={{
           height: "200px",
           width: "100%",

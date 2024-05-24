@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NavBar = ({ setCategory }) => {
+const NavBar = ({ setCategory, setCountry }) => {
   const [activeCategory, setActiveCategory] = useState("general");
 
   const handleCategoryClick = (category) => {
@@ -124,6 +124,28 @@ const NavBar = ({ setCategory }) => {
                 >
                   Technology
                 </div>
+              </li>
+            </ul>
+          </div>
+          <div className="dropdown">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Country
+            </button>
+            <ul className="dropdown-menu" style={{ cursor: "pointer" }}>
+              <li>
+                <a className="dropdown-item" onClick={() => setCountry("in")}>
+                  India
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" onClick={() => setCountry("us")}>
+                  USA
+                </a>
               </li>
             </ul>
           </div>

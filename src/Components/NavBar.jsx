@@ -29,12 +29,8 @@ const NavBar = ({ setCategory }) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="collapse navbar-collapse"
-            id="navbarNav"
-            style={{ cursor: "pointer" }}
-          >
-            <ul className="navbar-nav">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav" style={{ cursor: "pointer" }}>
               <li className="nav-item">
                 <div
                   className={

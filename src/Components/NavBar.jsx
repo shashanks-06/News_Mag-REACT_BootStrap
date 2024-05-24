@@ -1,4 +1,13 @@
+import { useState } from "react";
+
 const NavBar = ({ setCategory }) => {
+  const [activeCategory, setActiveCategory] = useState("general");
+
+  const handleCategoryClick = (category) => {
+    setActiveCategory(category);
+    setCategory(category);
+  };
+
   return (
     <>
       <nav
@@ -7,7 +16,7 @@ const NavBar = ({ setCategory }) => {
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            <span class="badge text-dark bg-light fs-4">NEWS MAG</span>
+            <span className="badge text-dark bg-light fs-4">NEWS MAG</span>
           </a>
           <button
             className="navbar-toggler"
@@ -20,54 +29,102 @@ const NavBar = ({ setCategory }) => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
+          <div
+            className="collapse navbar-collapse"
+            id="navbarNav"
+            style={{ cursor: "pointer" }}
+          >
             <ul className="navbar-nav">
               <li className="nav-item">
                 <div
-                  className="nav-link active"
-                  onClick={() => setCategory("general")}
+                  className={
+                    activeCategory === "general"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                  onClick={() => {
+                    handleCategoryClick("general");
+                  }}
                 >
                   General
                 </div>
               </li>
               <li className="nav-item">
                 <div
-                  className="nav-link"
-                  onClick={() => setCategory("business")}
+                  className={
+                    activeCategory === "business"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                  onClick={() => {
+                    handleCategoryClick("business");
+                  }}
                 >
                   Business
                 </div>
               </li>
               <li className="nav-item">
                 <div
-                  className="nav-link"
-                  onClick={() => setCategory("entertainment")}
+                  className={
+                    activeCategory === "entertainment"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                  onClick={() => {
+                    handleCategoryClick("entertainment");
+                  }}
                 >
                   Entertainment
                 </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link" onClick={() => setCategory("health")}>
+                <div
+                  className={
+                    activeCategory === "health" ? "nav-link active" : "nav-link"
+                  }
+                  onClick={() => {
+                    handleCategoryClick("health");
+                  }}
+                >
                   Health
                 </div>
               </li>
               <li className="nav-item">
                 <div
-                  className="nav-link"
-                  onClick={() => setCategory("science")}
+                  className={
+                    activeCategory === "science"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                  onClick={() => {
+                    handleCategoryClick("science");
+                  }}
                 >
                   Science
                 </div>
               </li>
               <li className="nav-item">
-                <div className="nav-link" onClick={() => setCategory("sports")}>
+                <div
+                  className={
+                    activeCategory === "sports" ? "nav-link active" : "nav-link"
+                  }
+                  onClick={() => {
+                    handleCategoryClick("sports");
+                  }}
+                >
                   Sports
                 </div>
               </li>
               <li className="nav-item">
                 <div
-                  className="nav-link"
-                  onClick={() => setCategory("technology")}
+                  className={
+                    activeCategory === "technology"
+                      ? "nav-link active"
+                      : "nav-link"
+                  }
+                  onClick={() => {
+                    handleCategoryClick("technology");
+                  }}
                 >
                   Technology
                 </div>

@@ -14,7 +14,12 @@ const NewsBoard = ({ category, country }) => {
   }, [category, country]);
 
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage:
+          "radial-gradient( circle farthest-corner at 22.4% 21.7%, rgba(4,189,228,1) 0%, rgba(2,83,185,1) 100.2% )",
+      }}
+    >
       <h2 className="text-center">
         Latest <span className="badge bg-danger">News</span>
       </h2>

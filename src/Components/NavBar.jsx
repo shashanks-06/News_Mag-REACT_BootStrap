@@ -13,6 +13,10 @@ const NavBar = ({ setCategory, setCountry }) => {
       <nav
         className="navbar navbar-expand-lg bg-body-tertiary"
         data-bs-theme="dark"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+        }}
       >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
